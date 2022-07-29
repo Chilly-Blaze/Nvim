@@ -1,4 +1,0 @@
-set number
-imap jk <Esc>
-nmap <space> :
-nmap ; /

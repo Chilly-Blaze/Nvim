@@ -1,9 +1,9 @@
 local M = {}
 
 -- 使用的语言 :TSInstallInfo
-M.language = { 'lua', 'cpp' }
+M.language = { 'lua', 'cpp', 'markdown' }
 -- LSP服务器名称 :LSPInstallInfo
-M.servers = { 'sumneko_lua', 'clangd' }
+M.servers = { 'sumneko_lua', 'clangd', 'marksman' }
 M.n_servers = { 'clangd' }
 -- 代码运行脚本
 M.script = {

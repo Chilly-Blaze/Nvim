@@ -1,6 +1,6 @@
 require 'p_config.colorscheme'
 require 'p_config.rnvimr'
-require 'p_config.bufferline'
+require 'p_config.bar'
 require 'p_config.dashboard'
 require 'p_config.project'
 require 'p_config.telescope'

@@ -13,9 +13,6 @@ m('i', '<C-z>', '<Esc>ui')
 m('i', '<C-s>', '<Esc>:w<CR>a')
 
 -- Normal
--- 跳转
-m('n', '<C-j>', '9j')
-m('n', '<C-k>', '9k')
 -- 分屏
 m('n', 'sv', '<Cmd>vsp<CR>')
 m('n', 'sh', '<Cmd>sp<CR>')
@@ -55,6 +52,9 @@ m({ 'n', 'i' }, '<C-a>', '<Esc>ggVG')
 m({ 'n', 'i' }, '<C-Q>', '<Cmd>q!<CR>')
 -- 替换
 m({ 'n', 'i' }, '<C-f>', '<Esc>:%s/')
+-- 光标快速移动
+m({ 'n', 'v' }, '<C-j>', '9j')
+m({ 'n', 'v' }, '<C-k>', '9k')
 
 -- Packer
 m('n', 'ss', '<Cmd>PackerSync<CR>')
