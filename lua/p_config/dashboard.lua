@@ -1,6 +1,9 @@
 local d = require 'dashboard'
 d.custom_header = {
     [[]],
+    [[]],
+    [[]],
+    [[]],
     [[         _________  /\     __ __   __         __________ __                                  ]],
     [[         \_   ___ \|  |__ |__|  | |  | ____ __\______   \  | _____  _______ ____             ]],
     [[         /    \  \/|  |  \|  |  | |  | \   |  | |   |  _/  | \__  \ \___  // __ \            ]],
@@ -23,9 +26,6 @@ d.custom_header = {
     -- [[itiiii1i1i:,,,,,,,,,,,,,,,,,,,,,,,,,,...,;:i,.....,...        ..,,,,,,,,,,,,t,f1ii;ii;f;;:i1;]],
     [[]],
     [[]],
-    [[]],
-    [[]],
-    [[]],
 }
 d.custom_center = {
     {
@@ -46,12 +46,12 @@ d.custom_center = {
     {
         icon = "  ",
         desc = "Edit Maps      ",
-        action = "edit ~/ config/nvim/lua/maps lua",
+        action = "edit ~/.config/nvim/lua/maps.lua",
     },
     {
         icon = "  ",
         desc = "Edit Projects  ",
-        action = "edit ~/ local/share/nvim/project_nvim/project_history",
+        action = "edit ~/.local/share/nvim/project_nvim/project_history",
     },
 }
 d.custom_footer = {

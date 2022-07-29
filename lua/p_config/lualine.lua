@@ -19,7 +19,7 @@ require 'lualine'.setup({
             "filename",
             {
                 "lsp_progress",
-                spinner_symbols = { " ", " ", " ", " ", " ", " " },
+                spinner_symbols = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
             },
         },
         lualine_x = {
@@ -27,9 +27,9 @@ require 'lualine'.setup({
             {
                 "fileformat",
                 symbols = {
-                    unix = '', -- e712
-                    dos = '', -- e70f
-                    mac = '', -- e711
+                    unix = ' ', -- e712
+                    dos = ' ', -- e70f
+                    mac = ' ', -- e711
                 },
             },
             "encoding",

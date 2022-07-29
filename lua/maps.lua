@@ -57,7 +57,7 @@ m({ 'n', 'v' }, '<C-j>', '9j')
 m({ 'n', 'v' }, '<C-k>', '9k')
 
 -- Packer
-m('n', 'ss', '<Cmd>PackerSync<CR>')
+m('n', '<Leader>ss', '<Cmd>PackerSync<CR>')
 -- barbar
 m('n', '<S-Tab>', '<Cmd>BufferPrevious<CR>')
 m('n', '<Tab>', '<Cmd>BufferNext<CR>')

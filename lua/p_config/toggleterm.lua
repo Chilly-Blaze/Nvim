@@ -20,7 +20,8 @@ function ifnil()
     if t == nil then
         t = require("toggleterm.terminal").Terminal:new({
             direction = 'float',
-            dir = '%:p:h'
+            dir = '%:p:h',
+            count = 100
         })
     end
 end
