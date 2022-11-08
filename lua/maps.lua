@@ -30,6 +30,8 @@ m('n', '<A-k>', '<C-w>k')
 m('n', '<A-l>', '<C-w>l')
 -- 保存
 m('n', '<C-s>', '<Cmd>w<CR>')
+-- 取消查找
+m('n', '//', '<Cmd>noh<CR>')
 -- 一键保存退出 or buffer退出
 m('n', 'q', function()
     local n = #vim.fn.getbufinfo { buflisted = 1 }
@@ -55,6 +57,8 @@ m({ 'n', 'i' }, '<C-f>', '<Esc>:%s/')
 -- 光标快速移动
 m({ 'n', 'v' }, '<C-j>', '9j')
 m({ 'n', 'v' }, '<C-k>', '9k')
+m({ 'n', 'v' }, '<C-h>', '15h')
+m({ 'n', 'v' }, '<C-l>', '15l')
 
 -- Packer
 m('n', '<Leader>ss', '<Cmd>PackerSync<CR>')
@@ -96,3 +100,4 @@ m('n', 'gf', '<Cmd>Lspsaga lsp_finder<CR>')
 m('n', 'gr', '<Cmd>Lspsaga rename<CR>')
 m('n', 'gs', '<Cmd>Lspsaga signature_help<CR>')
 m('n', 'ge', '<Cmd>Lspsaga diagnostic_jump_next<CR>')
+m('n', 'gj', '<Cmd>lua vim.lsp.buf.definition()<CR>')
