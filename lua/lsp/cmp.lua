@@ -3,16 +3,16 @@ local cmp = require 'cmp'
 if cmp ~= nil then
     cmp.setup {
         -- 指定 snippet 引擎
-        snippet = {
-            expand = function(args)
-                vim.fn["vsnip#anonymous"](args.body)
-            end,
-        },
+        -- snippet = {
+        --     expand = function(args)
+        --         vim.fn["vsnip#anonymous"](args.body)
+        --     end,
+        -- },
         -- 常规代码来源
         sources = cmp.config.sources({
             { name = 'nvim_lsp' },
             { name = "nvim_lsp_signature_help" },
-            { name = 'vsnip' },
+            -- { name = 'vsnip' },
         }, {
             { name = 'buffer' },
             { name = 'path' }

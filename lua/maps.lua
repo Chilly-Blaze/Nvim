@@ -54,6 +54,8 @@ m({ 'n', 'i' }, '<C-a>', '<Esc>ggVG')
 m({ 'n', 'i' }, '<C-Q>', '<Cmd>q!<CR>')
 -- 替换
 m({ 'n', 'i' }, '<C-f>', '<Esc>:%s/')
+-- 选中查找
+m('v', '/', 'y/<C-r>"<CR>N')
 -- 光标快速移动
 m({ 'n', 'v' }, '<C-j>', '9j')
 m({ 'n', 'v' }, '<C-k>', '9k')
@@ -92,6 +94,8 @@ m('n', '<Leader>cr', '<Cmd>RunFile toggleterm<CR>')
 -- ToggleTerm
 m({ 'n', 't' }, '<C-n>', require 'p_config.toggleterm'.toggleM)
 m({ 'n', 't' }, '<Leader>q', require 'p_config.toggleterm'.toggleS)
+-- LSPServer
+m('n', '<Leader>ls', '<Cmd>LspInstallInfo<CR>')
 -- LSPSaga
 m('n', 'gd', '<Cmd>Lspsaga preview_definition<CR>')
 m('n', 'gh', '<Cmd>Lspsaga hover_doc<CR>')
@@ -101,3 +105,6 @@ m('n', 'gr', '<Cmd>Lspsaga rename<CR>')
 m('n', 'gs', '<Cmd>Lspsaga signature_help<CR>')
 m('n', 'ge', '<Cmd>Lspsaga diagnostic_jump_next<CR>')
 m('n', 'gj', '<Cmd>lua vim.lsp.buf.definition()<CR>')
+-- 翻译
+m('n', '<Leader>fy', '<Cmd>Pantran engine=yandex source=zh<CR>')
+m('v', '<Leader>fy', ':Pantran engine=yandex source=en target=zh mode=hover<CR>')

@@ -18,4 +18,4 @@ require("onedarkpro").setup({
         window_unfocused_color = true, -- When the window is out of focus, change the normal background?
     }
 })
-vim.cmd 'colorscheme onedarkpro'
+vim.cmd 'colorscheme onelight'

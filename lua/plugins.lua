@@ -51,6 +51,8 @@ return require('packer').startup(function()
     use "lukas-reineke/indent-blankline.nvim"
     -- 代码格式化
     use { "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" }
+    -- 翻译
+    use { "potamides/pantran.nvim" }
     -- Git信息显示
     -- use 'lewis6991/gitsigns.nvim'
 end)
