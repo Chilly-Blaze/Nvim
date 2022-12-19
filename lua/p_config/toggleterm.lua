@@ -4,7 +4,7 @@ require 'toggleterm'.setup({
         elseif term.direction == 'horizontal' then return 15 end
     end,
     persist_size = false,
-    open_mapping = [[<C-t>]]
+    autodir = true
 })
 
 local t = nil
@@ -19,6 +19,7 @@ end
 function ifnil()
     if t == nil then
         t = require("toggleterm.terminal").Terminal:new({
+            display_name = 'custom',
             direction = 'float',
             dir = '%:p:h',
             count = 100

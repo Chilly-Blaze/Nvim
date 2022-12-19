@@ -35,32 +35,39 @@ m('n', '//', '<Cmd>noh<CR>')
 -- 一键保存退出 or buffer退出
 m('n', 'q', function()
     local n = #vim.fn.getbufinfo { buflisted = 1 }
-    if n == 0 or n == 1 then return '<Cmd>q<CR>'
-    else return '<Cmd>BufferClose<CR>'
+    if n == 0 or n == 1 then return 'ZZ'
+    else return '<Cmd>w<CR><Cmd>BufferClose<CR>'
     end
 end, { expr = true })
 
 -- Visual
 -- 复制到系统
 m('v', '<C-c>', '"+y')
+-- 选中查找
+m('v', '/', 'y/<C-r>"<CR>N')
+-- 连续缩进
+m('v', '<', '<gv')
+m('v', '>', '>gv')
 
 -- Terminal
 m('t', '<Leader>jk', '<C-\\><C-n>')
+m('t', '<A-h>', '<C-\\><C-n><C-w>h')
+m('t', '<A-j>', '<C-\\><C-n><C-w>j')
+m('t', '<A-k>', '<C-\\><C-n><C-w>k')
+m('t', '<A-l>', '<C-\\><C-n><C-w>l')
 
 -- Global
 -- 全选
 m({ 'n', 'i' }, '<C-a>', '<Esc>ggVG')
 -- 强制退出
 m({ 'n', 'i' }, '<C-Q>', '<Cmd>q!<CR>')
--- 替换
-m({ 'n', 'i' }, '<C-f>', '<Esc>:%s/')
--- 选中查找
-m('v', '/', 'y/<C-r>"<CR>N')
 -- 光标快速移动
 m({ 'n', 'v' }, '<C-j>', '9j')
 m({ 'n', 'v' }, '<C-k>', '9k')
 m({ 'n', 'v' }, '<C-h>', '15h')
 m({ 'n', 'v' }, '<C-l>', '15l')
+m({ 'n', 'v' }, 'e', '$h')
+m({ 'n', 'v' }, 'E', '0')
 
 -- Packer
 m('n', '<Leader>ss', '<Cmd>PackerSync<CR>')
@@ -92,6 +99,8 @@ m('v', '<C-_>', 'gc', { remap = true })
 -- CodeRunner
 m('n', '<Leader>cr', '<Cmd>RunFile toggleterm<CR>')
 -- ToggleTerm
+m('n', '<Leader>tv', '<Cmd>exe v:count1 . "ToggleTerm direction=vertical"<CR>')
+m('n', '<Leader>th', '<Cmd>exe v:count1 . "ToggleTerm direction=horizontal"<CR>')
 m({ 'n', 't' }, '<C-n>', require 'p_config.toggleterm'.toggleM)
 m({ 'n', 't' }, '<Leader>q', require 'p_config.toggleterm'.toggleS)
 -- LSPServer
@@ -106,5 +115,5 @@ m('n', 'gs', '<Cmd>Lspsaga signature_help<CR>')
 m('n', 'ge', '<Cmd>Lspsaga diagnostic_jump_next<CR>')
 m('n', 'gj', '<Cmd>lua vim.lsp.buf.definition()<CR>')
 -- 翻译
-m('n', '<Leader>fy', '<Cmd>Pantran engine=yandex source=zh<CR>')
+m('n', '<Leader>fy', '<Cmd>Pantran engine=yandex source=zh<CR>i')
 m('v', '<Leader>fy', ':Pantran engine=yandex source=en target=zh mode=hover<CR>')

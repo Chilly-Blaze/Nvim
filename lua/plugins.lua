@@ -18,8 +18,8 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-buffer' -- { name = 'buffer' },
     use 'hrsh7th/cmp-path' -- { name = 'path' }
     use 'hrsh7th/cmp-cmdline' -- { name = 'cmdline' }
-    use 'hrsh7th/cmp-vsnip' -- { name = 'vsnip' }
-    use 'hrsh7th/vim-vsnip'
+    use 'L3MON4D3/LuaSnip' -- { name = 'luasnip' }
+    use 'saadparwaiz1/cmp_luasnip'
     use 'hrsh7th/cmp-nvim-lsp-signature-help' -- { name = 'nvim_lsp_signature_help' }
     -- 使代码片段源可用
     use 'rafamadriz/friendly-snippets'
